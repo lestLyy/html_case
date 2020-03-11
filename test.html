@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		var name = prompt('请输入你的名字');
+		alert(name);
+		var num = 10;
+		var result = num > 5 ? true : false;
+		num = 'ni';//js变量数据类型是程序运行过程中，根据等号右边值来确定的
+        //弱数据类型
+        var arr = [1,2,'hao',true];
+		var str = '你好"hao"好';
+        //1
+		function hanshu(a,b){   //可不声明
+			console.write("hello,world");
+			console.write(arguments);//伪数组，存储了所有实参
+		}
+		hanshu();
+        //2  匿名函数声明
+        var hanshu2 = function(){};  //hanshu2 变量名
+
+        //如果在函数内部没有声明直接赋值的变量，也属于全局变量
+
+        //js支持预解析  把函数和变量提升到当前作用域最前面  提升声明，不提升赋值
+        //函数也会把函数声明提升到最前面  不调用函数
+
+        var a=b=c=9;//只有a被声明了  不同于var a,b,c;
+
+        var obj = {  //创建对象
+        	name:"张三",
+        }
+
+        var obj = new Object();
+        obj.uname = "张三丰";//追加属性
+
+        //构造函数
+        function obj(uname,uage){
+        	this.name=uname;
+        	this.age=uage;
+        }
+        var ldh = new obj("liudehua",18);
+
+        //遍历对象
+        for (var k in obj){
+        	console.write(k);  //k变量属性名
+        	console.write(obj[k]);//属性值
+        }
+        
+        //使用内置对象实现  math对象  date对象 Windows对象
+        console.write(Math.abs(-1));  //求绝对值  MDN查看
+
+        console.write(Math.random());  //取0到1的随机数
+
+        //Date  对象  需要new一个对象
+
+        var date = new Date();  //可带参数 ‘2019-10-1 08:08:08’  MDN查看属性和方法
+        var date1 = +new Date()  //返回毫秒时间戳
+        console.write(date);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
