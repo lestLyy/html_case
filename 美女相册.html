@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<style type="text/css">
+		body{
+			width: 385px;
+			margin-right: auto;
+			margin-left: auto;
+			border:2px solid black;
+		}
+		ul{
+			padding: 0;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		li{
+			list-style: none;
+		}
+		#images li{
+			float: left;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		#imag{
+			margin-left: 40px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="images">
+		<li><a href="image/ly1.jpg"><img src="image/ly1.jpg" width="100px"></a></li>
+		<li><a href="image/ly2.jpg"><img src="image/ly2.jpg" width="100px"></a></li>
+		<li><a href="image/ly4.jpg"><img src="image/ly4.jpg" width="100px"></a></li>
+	</ul>
+	<div style="clear: both;"></div>
+	<img id = "imag" src="image/ly1.jpg" width="300px">
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#images>li>a').click(function(){
+			var srcValue = $(this).attr('href');
+			$('#imag').attr('src',srcValue);
+			return false;  //阻止a标签跳转
+		});
+		
+	});
+</script>

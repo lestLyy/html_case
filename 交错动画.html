@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			position: flex;
+			height: 100vh;
+			justify-content: center;   
+			align-items: center;  
+			background-color: #222;
+		}
+
+		.loading{
+			$color:#7ef9ff,#89cff0,#4682b4,#0f52ba,#000080;
+			display: flex;
+			animation-delay: 1s;
+		}
+
+		.dot{
+			position: relative;
+			width: 2em;
+			height: 2em;
+			margin: 0.8em;
+		}
+
+		.dot::before{
+			position:absolute; 
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: inherit;
+			animation: wave 2s;
+		}
+			
+		
+	</style>
+</head>
+<body>
+	<div class="loading">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+</body>
+</html>

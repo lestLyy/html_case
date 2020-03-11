@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		淡入淡出！
+	</title>
+	<style type="text/css">
+		p{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#btn1').on('click',function(){  //按钮一绑定鼠标点击事件  .off解绑
+				$('p').fadeOut();
+			});
+			$('#btn2').on('click',function(){
+				$('p').fadeIn();
+			});		
+		});
+		
+	</script>
+
+</head>
+<body>
+	<input type="button" value="淡入" id="btn1">
+	<input type="button" value="淡出" id="btn2">
+	<p></p>
+
+	
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var leftTime
+		function time(ms){
+			var nowTime = new Date();
+			var setTime = +new Date(ms);
+			leftTime = (setTime - nowTime)/1000;
+			var hour = parseInt(leftTime /60 /60 %24);
+			var min = parseInt(leftTime /60 %60 );
+			var second = parseInt(leftTime %60);
+			console.log(hour);
+			console.log(min);
+			console.log(second);
+		}
+		function a(ms){
+			
+		}
+		time("2020-3-6 17:00:00");
+		a(leftTime);
+
+	</script>
+
+</head>
+<body>
+	<div>
+		<label id="hours"></label>
+		<label id="mins"></label>
+		<label id="seconds"></label>
+	</div>
+</body>
+</html>

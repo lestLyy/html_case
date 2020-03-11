@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.warp{
+			width: 450px;
+			height: 290px;
+			margin-top: 50px;
+			padding: 5px;
+			border:2px solid pink;
+			overflow: hidden;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		ul{
+			list-style: none;
+		}
+		#center{
+			float: left;
+
+		}
+		#left,#right{
+			float: left;
+
+			padding-top: 20px;
+		}
+		#left li,#right li{
+			padding-top: 30px;
+		}
+
+		#left li a,#right li a{
+			display: block;
+			width: 48px;
+			height: 29px;
+			line-height: 27px;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="warp">
+		<ul id="left">
+			<li><a href="#">吕燕1</a></li>
+			<li><a href="#">吕燕2</a></li>
+			<li><a href="#">吕燕3</a></li>
+		</ul>
+
+		<ul id="center">
+			<li><img src="image/ly1.jpg" width="200px" /></li>
+			<li><img src="image/ly2.jpg" width="200px" /></li>
+			<li><img src="image/ly3.jpg" width="200px" /></li>
+			<li><img src="image/ly4.jpg" width="200px" /></li>
+			<li><img src="image/ly5.jpg" width="200px" /></li>
+			<li><img src="image/ly6.jpg" width="200px" /></li>
+		</ul>
+
+		<ul id="right">
+			<li><a href="#">吕燕4</a></li>
+			<li><a href="#">吕燕5</a></li>
+			<li><a href="#">吕燕6</a></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#left>li').mouseenter(function(){
+			var index = $(this).index();
+			$('#center>li').eq(index).show().siblings('li').hide();
+		});
+		$('#right>li').mouseenter(function(){
+			var index = $(this).index();
+			index +=3;
+			$('#center>li').eq(index).show().siblings('li').hide();
+		})
+	});
+</script>
